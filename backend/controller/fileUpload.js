@@ -22,7 +22,7 @@ exports.uploadFile = async (req, res) => {
       const extension = parts[parts.length - 1];
 
       const params = {
-        Bucket: "testbucket",
+        Bucket: process.env.BUCKET_NAME,
         Key: `${uuidv4()}.${extension}`,
         Body: file.data,
         ACL: "public-read",
