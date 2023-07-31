@@ -43,7 +43,7 @@ const index = () => {
   return (
     <div>
       <h1>Upload file</h1>
-      <input accept="video/*" type="file" onChange={handleUploadFile} />
+      <input type="file" onChange={handleUploadFile} />
       {progress && <span>{`${progress}%`}</span>}
     </div>
   );
